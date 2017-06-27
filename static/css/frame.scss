@@ -291,3 +291,17 @@
     background-image: url("../img/flag-active.svg");
   }
 }
+
+.canvas-container {
+  position:absolute;
+  left:0;
+  top:$grid-unit * 5;
+}
+
+.canvas-container .editor {
+  mix-blend-mode: multiply;
+  margin-bottom:$grid-unit * 5;
+  position: absolute;
+  border: 1px solid black;
+  overflow:visible;
+}

@@ -4,9 +4,9 @@ const ReactDOM = require("react-dom");
 const { Footer } = require("../../footer-view");
 const sendEvent = require("../../browser-send-event.js");
 const { ShareButton } = require("../../share-buttons");
+const { Editor } = require("../../editor");
 const { TimeDiff, intervalDescription } = require("./time-diff");
 const reactruntime = require("../../reactruntime");
-
 
 class Clip extends React.Component {
   constructor(props) {
@@ -305,12 +305,16 @@ class Body extends React.Component {
     let shotRedirectUrl = `/redirect?to=${encodeURIComponent(shot.url)}`;
 
     let trashOrFlagButton;
+    let editButton;
     if (this.props.isOwner) {
       trashOrFlagButton = <button className="button transparent trash" title="Delete this shot permanently" onClick={ this.onClickDelete.bind(this) }>
+      </button>;
+      editButton = <button className="button transparent trash" title="Edit this image" onClick={ this.onClickEdit.bind(this) }>
       </button>;
     } else {
       trashOrFlagButton = <button className="button transparent flag" title="Report this shot for abuse, spam, or other problems" onClick={ this.onClickFlag.bind(this) }>
       </button>;
+      editButton = null;
     }
 
     let myShotsHref = "/shots";
@@ -349,6 +353,7 @@ class Body extends React.Component {
 
     return (
       <reactruntime.BodyTemplate {...this.props}>
+        { this.state.imageEditing ? this.renderEditor() : null}
         <div id="frame" className="inverse-color-scheme full-height column-space">
           { renderGetFirefox ? this.renderFirefoxRequired() : null }
         <div className="frame-header default-color-scheme">
@@ -363,6 +368,7 @@ class Body extends React.Component {
             </div>
           </div>
           <div className="shot-alt-actions">
+            { editButton }
             { trashOrFlagButton }
             <ShareButton abTests={this.props.abTests} clipUrl={clipUrl} shot={shot} isOwner={this.props.isOwner} staticLink={this.props.staticLink} renderExtensionNotification={renderExtensionNotification} isExtInstalled={this.props.isExtInstalled} />
             <a className="button primary" href={ this.props.downloadUrl } onClick={ this.onClickDownload.bind(this) }
@@ -383,6 +389,14 @@ class Body extends React.Component {
       <div> <strong>Firefox Screenshots</strong> made simple. Take, save and share screenshots without leaving Firefox. <a href="https://www.mozilla.org/firefox/new/?utm_source=screenshots.firefox.com&utm_medium=referral&utm_campaign=screenshots-acquisition" onClick={ this.clickedInstallFirefox.bind(this) }>Get Firefox now</a></div>
       <a className="close" onClick={ this.doCloseBanner.bind(this) }></a>
     </div>;
+  }
+
+  onClickEdit() {
+    this.setState({imageEditing: true});
+  }
+
+  renderEditor() {
+    return <Editor></Editor>
   }
 
   clickedInstallExtension() {
