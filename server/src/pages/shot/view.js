@@ -13,7 +13,8 @@ class Clip extends React.Component {
     super(props);
     this.state = {
       loading: true,
-      imageDisplay: "none"
+      imageDisplay: "none",
+      imageEditing: false
     };
   }
 
@@ -309,7 +310,7 @@ class Body extends React.Component {
     if (this.props.isOwner) {
       trashOrFlagButton = <button className="button transparent trash" title="Delete this shot permanently" onClick={ this.onClickDelete.bind(this) }>
       </button>;
-      editButton = <button className="button transparent trash" title="Edit this image" onClick={ this.onClickEdit.bind(this) }>
+      editButton = <button className="button transparent edit" title="Edit this image" onClick={ this.onClickEdit.bind(this) }>
       </button>;
     } else {
       trashOrFlagButton = <button className="button transparent flag" title="Report this shot for abuse, spam, or other problems" onClick={ this.onClickFlag.bind(this) }>
@@ -353,7 +354,7 @@ class Body extends React.Component {
 
     return (
       <reactruntime.BodyTemplate {...this.props}>
-        { this.state.imageEditing ? this.renderEditor() : null}
+        { this.state.imageEditing ? this.renderEditor(clipUrl) : null}
         <div id="frame" className="inverse-color-scheme full-height column-space">
           { renderGetFirefox ? this.renderFirefoxRequired() : null }
         <div className="frame-header default-color-scheme">
@@ -392,11 +393,11 @@ class Body extends React.Component {
   }
 
   onClickEdit() {
-    this.setState({imageEditing: true});
+    this.setState({imageEditing: !this.state.imageEditing});
   }
 
-  renderEditor() {
-    return <Editor></Editor>
+  renderEditor(clipUrl) {
+    return <Editor clipUrl={clipUrl}></Editor>
   }
 
   clickedInstallExtension() {
