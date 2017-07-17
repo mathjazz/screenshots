@@ -301,18 +301,6 @@ $very-light-grey: #ededed;
   border: 1px solid #fff;
 }
 
-.preview-button-save {
-  @extend .button;
-  @extend .primary;
-  background-image: url("MOZ_EXTENSION/icons/menu-myshot-white.svg");
-  background-repeat: no-repeat;
-  background-position: left center;
-  padding-left: 40px;
-  font-size: 18px;
-  margin: 5px;
-  min-width: 100px;
-}
-
 // FIXME: some of the styles in .fixed-container were copied from
 // .preview-overlay and are probably unnecessary
 .fixed-container {

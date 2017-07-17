@@ -335,7 +335,7 @@ this.ui = (function() { // eslint-disable-line no-unused-vars
                     <div class="preview-buttons">
                       <button class="highlight-button-cancel"></button>
                       <button class="highlight-button-download"></button>
-                      <button class="preview-button-save" data-l10n-id="saveScreenshotSelectedArea"></button>
+                      <button class="highlight-button-save" data-l10n-id="saveScreenshotSelectedArea"></button>
                     </div>
                   </div>
                 </div>
@@ -347,7 +347,7 @@ this.ui = (function() { // eslint-disable-line no-unused-vars
             const overlay = this.document.querySelector(".preview-overlay");
             overlay.querySelector(".highlight-button-download").addEventListener(
               "click", watchFunction(assertIsTrusted(standardOverlayCallbacks.onDownloadPreview)));
-            overlay.querySelector(".preview-button-save").addEventListener(
+            overlay.querySelector(".highlight-button-save").addEventListener(
               "click", watchFunction(assertIsTrusted(standardOverlayCallbacks.onSavePreview)));
             overlay.querySelector(".highlight-button-cancel").addEventListener(
               "click", watchFunction(assertIsTrusted(standardOverlayCallbacks.cancel)));
