@@ -25,7 +25,7 @@ creatingPageTitleDefault = stran
 [[ Home page ]]
 
 homePageButtonMyShots = Pojdi na moje posnetke
-homePageDownloadFirefoxTitle = Firefox
+homePageDownloadFirefoxTitle = Firefox2
 homePageDownloadFirefoxSubTitle = Brezplačen prenos
 // Note: do not translate 'Firefox Screenshots' when translating this string
 homePageHowScreenshotsWorks = Kako deluje Firefox Screenshots
