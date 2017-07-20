@@ -10,7 +10,7 @@
 gMyShots = TESTTEST Le mie immagini
 gHomeLink = Pagina iniziale
 gNoShots
-    .alt = Nessuna immagine trovata
+    .alt = ANOTHER TEST Nessuna immagine trovata
 gScreenshotsDescription = Realizzare screenshot non è mai stato così facile. Cattura, salva e condividi le tue immagini senza uscire da Firefox.
 
 
