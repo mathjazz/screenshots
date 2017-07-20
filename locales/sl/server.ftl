@@ -24,6 +24,7 @@ homePageButtonMyShots =
     Kaj pa to?
     Kaj pa to?
     Kaj pa to?
+homePageDownloadFirefoxTitle = Firefox
 homePageDownloadFirefoxSubTitle = Brezplačen prenos
 // Note: do not translate 'Firefox Screenshots' when translating this string
 homePageHowScreenshotsWorks = Kako deluje Firefox Screenshots
