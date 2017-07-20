@@ -15,6 +15,7 @@ gNoShots
 
 [[ Creating page ]]
 
+creatingPageTitleDefault = stran
 
 
 [[ Home page ]]
