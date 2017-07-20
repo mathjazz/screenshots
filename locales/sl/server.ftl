@@ -18,7 +18,7 @@ gNoShots
 // Note: { $title } is a placeholder for the title of the web page
 // captured in the screenshot. The default, for pages without titles, is
 // creatingPageTitleDefault.
-creatingPageTitle = Ustvarjanje { $title }
+creatingPageTitle = Ustvarjanje { $title } 1
 creatingPageTitleDefault = stran
 
 
