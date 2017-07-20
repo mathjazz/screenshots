@@ -7,7 +7,7 @@
 // Global phrases shared across pages, prefixed with 'g'
 [[ global ]]
 
-gMyShots = Le mie immagini
+gMyShots = TESTTEST Le mie immagini
 gHomeLink = Pagina iniziale
 gNoShots
     .alt = Nessuna immagine trovata
