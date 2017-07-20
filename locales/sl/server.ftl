@@ -19,7 +19,7 @@ gNoShots
 // captured in the screenshot. The default, for pages without titles, is
 // creatingPageTitleDefault.
 creatingPageTitle = Ustvarjanje { $title } 3
-creatingPageTitleDefault = stran2
+creatingPageTitleDefault = stran3
 
 
 [[ Home page ]]
