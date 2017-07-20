@@ -15,15 +15,15 @@ gNoShots
 
 [[ Creating page ]]
 
+// Note: { $title } is a placeholder for the title of the web page
+// captured in the screenshot. The default, for pages without titles, is
+// creatingPageTitleDefault.
+creatingPageTitle = Ustvarjanje { $title }
 creatingPageTitleDefault = stran
 
 
 [[ Home page ]]
 
-homePageButtonMyShots =
-    Kaj pa to?
-    Kaj pa to?
-    Kaj pa to?
 homePageDownloadFirefoxTitle = Firefox
 homePageDownloadFirefoxSubTitle = Brezplačen prenos
 // Note: do not translate 'Firefox Screenshots' when translating this string
